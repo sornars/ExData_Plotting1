@@ -13,6 +13,6 @@ household_power_consumption <- household_power_consumption[household_power_consu
 household_power_consumption$Time <- strptime(paste(household_power_consumption$Date, household_power_consumption$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Create plot and save to PNG
-png('plot1.png', width=504, height=504, bg = "transparent")
+png('plot1.png', width=480, height=480, bg = "transparent")
 hist(household_power_consumption$Global_active_power, col = "#FF2500", xlab = "Global Active Power (killowats)", ylab = "Frequency", main = "Global Active Power")
 dev.off()

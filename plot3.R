@@ -13,7 +13,7 @@ household_power_consumption <- household_power_consumption[household_power_consu
 household_power_consumption$Time <- strptime(paste(household_power_consumption$Date, household_power_consumption$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Create plot and save to PNG
-png('plot3.png', width=504, height=504, bg = "transparent")
+png('plot3.png', width=480, height=480, bg = "transparent")
 plot(household_power_consumption$Time, household_power_consumption$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(household_power_consumption$Time, household_power_consumption$Sub_metering_2, type = "l", col = "red")
 lines(household_power_consumption$Time, household_power_consumption$Sub_metering_3, type = "l", col = "blue")

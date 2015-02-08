@@ -13,7 +13,7 @@ household_power_consumption <- household_power_consumption[household_power_consu
 household_power_consumption$Time <- strptime(paste(household_power_consumption$Date, household_power_consumption$Time), format = "%Y-%m-%d %H:%M:%S")
 
 # Create plot and save to PNG
-png('plot4.png', width=504, height=504, bg = "transparent")
+png('plot4.png', width=480, height=480, bg = "transparent")
 par(mfrow=c(2,2))
 plot(household_power_consumption$Time, household_power_consumption$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
 plot(household_power_consumption$Time, household_power_consumption$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
